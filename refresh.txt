@@ -1,0 +1,35 @@
+<script>
+						number1();
+						number2();
+   						
+						</script>
+						<button type="button" class="btn-success cng-btn" id="val1"><script>
+						
+   						document.write(value1);
+						</script></button>
+						<button type="button" class="btn-info cng-btn" id="opt"><script>
+   						 document.write(opn_btn());
+						</script></button>
+						<button type="button" class="btn-success cng-btn" id="val2"><script>
+    					document.write(value2);
+    					generateAnswer();
+						</script></button><br>
+						<button type="button" class="btn-primary cng-btn" onclick="chk(ans1, 'ans1')" id="ans1"><script>
+						
+						document.write(ans1);
+						</script></button>
+						<button type="button" class="btn-primary cng-btn" onclick="chk(ans2, 'ans2')" id="ans2"><script>
+						document.write(ans2);
+						</script></button>
+						<button type="button" class="btn-primary cng-btn" onclick="chk(ans3, 'ans3')" id="ans3"><script>
+						document.write(ans3);
+						</script></button>
+						<button type="button" class="btn-primary cng-btn" onclick="chk(ans4, 'ans4')" id="ans4"><script>
+						document.write(ans4);
+						</script></button>
+
+						<!-- <div><p id="t-time"><script>timer();</script></p></div> -->
+
+
+				</div>     
+				<button type="button" class="btn-success cng-btn" id="newhide">Correct</button> 

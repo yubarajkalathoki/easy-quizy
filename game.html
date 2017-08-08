@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>main-game</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <script src="js/random.js"></script>
+</head>
+<body>
+
+<header><!-- header start -->
+    <div class="container"><!-- container start -->
+      <div class="row"><!-- row start -->
+          <div class="col-lg-12">
+              <div class="logo">
+                  <img src="img/logo.png" alt="Logo">
+              </div>
+                  <!--<div class="col-md-offset-10 col-lg-12 ">-->
+                  <!--<div class="textholder">-->
+                  <!--<p>fgdsfaesf asdf ardaws arfdwa</p>-->
+                  <!--</div>-->
+                  <!--</div>-->
+          </div>
+      </div><!-- row end -->
+    </div><!-- container end -->
+</header><!-- header end -->
+
+
+<!-- main-game start -->
+
+			
+		
+
+	<div class="banner"><!-- banner start -->
+    <div class="wrapper"><!-- wrapper start -->
+        <div class="row" id="testLoad"><!-- row start -->
+         <div class="col-md-6 col-md-offset-3 text-center" id="rcol">
+				    <div id="test"></div>
+						<script type="text/javascript">
+           	number1();
+						number2();
+   						console.log("value from html page:"+value1);
+						</script>
+						<button type="button" class="btn-success cng-btn" id="val1"><script>
+   						 document.write(value1);
+						</script>
+            </button>
+						<button type="button" class="btn-info cng-btn" id="opt"><script>
+   						 document.write(opn_btn());
+						</script></button>
+						<button type="button" class="btn-success cng-btn" id="val2"><script>
+    					document.write(value2);
+    					generateAnswer();
+						</script></button><br>
+						<button type="button" class="btn-primary cng-btn" onclick="chk(ans1, 'ans1')" id="ans1"><script>
+						
+						document.write(ans1);
+						</script></button>
+						<button type="button" class="btn-primary cng-btn" onclick="chk(ans2, 'ans2')" id="ans2"><script>
+						document.write(ans2);
+						</script></button>
+						<button type="button" class="btn-primary cng-btn" onclick="chk(ans3, 'ans3')" id="ans3"><script>
+						document.write(ans3);
+						</script></button>
+						<button type="button" class="btn-primary cng-btn" onclick="chk(ans4, 'ans4')" id="ans4"><script>
+						document.write(ans4);
+						</script></button>
+
+						<!-- <div><p id="t-time"><script>timer();</script></p></div> -->
+
+
+				</div>     
+				<button type="button" class="btn-success cng-btn" id="newhide">Correct</button>       
+       	</div><!-- row end -->   
+
+
+        
+       	<div class="modal fade in " id="newmodel"  role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-center">You Scored 2/10</h4>
+        </div>
+		<div class="modal-body">
+		 <div class="row">
+            <div class="col-md-4">
+			<div class="modal-select1">
+              <h4>Your Questions</h4>
+			  </div>
+			  <br>
+			  <div class="col-md-4">
+			  <div class="modal-select2">
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  </div>
+			  </div>
+            </div>
+            <div class="col-md-4">
+              <div class="modal-select1">
+              <h4>Your Answers</h4>
+			  </div>
+			  <br>
+			  <div class="col-md-4">
+			  <div class="modal-select2">
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  </div>
+			  </div>
+            </div>
+			<div class="col-md-4">
+              <div class="modal-select1">
+              <h4>Correct Answers</h4>
+			  </div>
+			  <br>
+			  <div class="col-md-4">
+			  <div class="modal-select2">
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  <br>
+			  <h5>2+2<h5>
+			  </div>
+			  </div>
+            </div>
+          </div>
+		</div>
+		
+
+
+        <div class="modal-footer">
+          <div class="starter">
+              <button type="button" class="btn-all left" data-toggle="modal" onclick="refresh();" >
+                CONTINUE
+              </button>
+             
+             
+              <button type="button" class="btn-all right" data-toggle="modal" onclick="homepage();" >
+                EXIT
+              </button>
+   
+          </div><!-- starter -->
+        </div><!-- modal-footer -->
+
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+  </div><!-- "modal fade -->
+
+    </div><!-- wrapper end -->
+
+	
+    
+</div><!-- banner end -->
+
+
+
+</body>
+</html>

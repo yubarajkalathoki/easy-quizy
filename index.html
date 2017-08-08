@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Easy Quizy</title> 
+    <link rel="stylesheet" href="css/bootstrap.min.css" >   
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"> 
+</head>
+<body>
+<header>
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="logo">
+                  <img src="img/logo.png" alt="Logo">
+              </div>
+            </div>
+      </div>
+    </div>
+</header>
+<!--//header-->
+    <div class="banner">
+      <div class="wrapper">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <div class="textholder">
+                  <h1>LEARN THE ART OF INVESTING OF PLAYING</h1>
+                </div>
+                      <button class="btn btn-default btn-lg center-block" type="button" data-toggle="modal" onclick="coccount(); cokrw();" data-target="#myModal1">PLAY NOW</button>
+                      
+            </div><!-- col-md-6 col-md-offset-3 text-center -->
+        </div><!-- row -->
+      </div><!-- wrapper -->
+    </div><!-- banner -->
+
+
+    <!-- Modal -->
+  <div class="modal custom-modal fade" id="myModal1">
+    <div class="modal-dialog modal-sm">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Welcome to EasyQuizy</h4>
+        </div>
+		<div class="modal-body">
+            <div class="modal-select">          
+              <h3>Please Select the range!</h3>            
+             </div>
+
+               <div class="range clearfix"> 
+                              
+                        <form id="form" name="form" onsubmit="return false;" class="form">
+                          <div class="inputpanel clearfix">
+							<label for="userInput1">From</label>
+							<input type="number" id="userInput1">
+						  </div>
+						  <div class="inputpanel clearfix">
+							<label for="userInput2">To</label>
+							<input type="number" id="userInput2">
+						  </div>
+							<hr/>
+						  <button type="button" class="btn-all" data-toggle="modal" onclick="r();" >
+                START GAME
+              </button>
+							
+                         </form>             
+               </div>
+
+		</div>
+        
+
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+  </div><!-- "modal fade -->
+
+
+
+<!-- js files -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/random.js"></script>
+	
+</body>
+</html>
