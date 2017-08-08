@@ -980,10 +980,10 @@ function toggler() {
                     }
      				} 
 var   refresh = function(){
-    window.open("../EasyQuizy/game.html", "_self");
+    window.open("./game.html", "_self");
 }
 var homepage = function(){
-     window.open("../EasyQuizy/index.html", "_self");
+     window.open("./index.html", "_self");
 }
 var closeDialog = function() {
     setCookie("mycookie",json_str,-1);
