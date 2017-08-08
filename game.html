@@ -9,11 +9,11 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="js/jquery-1.10.2.min.js"></script>
  <script src="js/bootstrap.min.js"></script>
  <script src="js/random.js"></script>
 </head>
-<body>
+<body id="bd">
 
 <header><!-- header start -->
     <div class="container"><!-- container start -->
@@ -44,8 +44,9 @@
          <div class="col-md-6 col-md-offset-3 text-center" id="rcol">
 				    <div id="test"></div>
 						<script type="text/javascript">
-           	number1();
-						number2();
+            fireMeUp();
+            randomOperator();
+            opn_btn();
    						console.log("value from html page:"+value1);
 						</script>
 						<button type="button" class="btn-success cng-btn" id="val1"><script>
@@ -53,23 +54,23 @@
 						</script>
             </button>
 						<button type="button" class="btn-info cng-btn" id="opt"><script>
-   						 document.write(opn_btn());
+   						 document.write(op);
 						</script></button>
 						<button type="button" class="btn-success cng-btn" id="val2"><script>
     					document.write(value2);
     					generateAnswer();
 						</script></button><br>
-						<button type="button" class="btn-primary cng-btn" onclick="chk(ans1, 'ans1')" id="ans1"><script>
+						<button type="button" class="btn-primary cng-btn" onclick="chk(ans1, 'ans1','ans2','ans3','ans4')" id="ans1"><script>
 						
 						document.write(ans1);
 						</script></button>
-						<button type="button" class="btn-primary cng-btn" onclick="chk(ans2, 'ans2')" id="ans2"><script>
+						<button type="button" class="btn-primary cng-btn" onclick="chk(ans2, 'ans2','ans1','ans3','ans4')" id="ans2"><script>
 						document.write(ans2);
 						</script></button>
-						<button type="button" class="btn-primary cng-btn" onclick="chk(ans3, 'ans3')" id="ans3"><script>
+						<button type="button" class="btn-primary cng-btn" onclick="chk(ans3, 'ans3','ans2','ans1','ans4')" id="ans3"><script>
 						document.write(ans3);
 						</script></button>
-						<button type="button" class="btn-primary cng-btn" onclick="chk(ans4, 'ans4')" id="ans4"><script>
+						<button type="button" class="btn-primary cng-btn" onclick="chk(ans4, 'ans4','ans2','ans3','ans1')" id="ans4"><script>
 						document.write(ans4);
 						</script></button>
 
@@ -84,10 +85,13 @@
         
        	<div class="modal fade in " id="newmodel"  role="dialog" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog modal-lg">
-      <!-- Modal content-->
+      <!-- Modal content--> 
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title text-center">You Scored 2/10</h4>
+          <h4 class="modal-title text-center">
+          <script type="text/javascript">
+            document.write("You Scored "+getCookie("crt")+"/10");
+          </script></h4>
         </div>
 		<div class="modal-body">
 		 <div class="row">
@@ -98,25 +102,85 @@
 			  <br>
 			  <div class="col-md-4">
 			  <div class="modal-select2">
-			  <h5>2+2<h5>
+			  <h5>
+			  <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[1]+ arr[2]+ arr[3]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+			  <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[6]+arr[7]+arr[8]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+			  <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[11]+arr[12]+arr[13]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+			  <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[16]+arr[17]+arr[18]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+			  <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[21]+arr[22]+arr[23]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+			  <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[26]+arr[27]+arr[28]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[31]+arr[32]+arr[33]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[36]+arr[37]+arr[38]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[41]+arr[42]+arr[43]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+			  <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[46]+arr[47]+arr[48]);
+              </script>
+              </h5>
 			  </div>
 			  </div>
             </div>
@@ -127,25 +191,85 @@
 			  <br>
 			  <div class="col-md-4">
 			  <div class="modal-select2">
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[4]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[9]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[14]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[19]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[24]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[29]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[34]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[39]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[44]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[49]);
+              </script>
+              </h5>
 			  </div>
 			  </div>
             </div>
@@ -156,25 +280,85 @@
 			  <br>
 			  <div class="col-md-4">
 			  <div class="modal-select2">
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[5]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[10]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[15]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[20]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[25]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[30]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[35]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[40]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[45]);
+              </script>
+              </h5>
 			  <br>
-			  <h5>2+2<h5>
+			  <h5>
+              <script>
+              var json_str = getCookie('mycookie');
+              arr = JSON.parse(json_str);
+              document.write(arr[50]);
+              </script>
+              </h5>
 			  </div>
 			  </div>
             </div>
@@ -185,7 +369,7 @@
 
         <div class="modal-footer">
           <div class="starter">
-              <button type="button" class="btn-all left" data-toggle="modal" onclick="refresh();" >
+              <button type="button" class="btn-all left" data-toggle="modal" onclick="closeDialog(); refresh();" >
                 CONTINUE
               </button>
              

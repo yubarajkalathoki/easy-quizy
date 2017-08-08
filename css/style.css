@@ -21,7 +21,8 @@ p{
 
 .modal-select2 h5{
 	font-size: 18px;
-	font-weight: 600;
+    font-weight: 600;
+    margin: 5px 94px;
 }
 
 header{
@@ -258,27 +259,46 @@ header{
 .modal-select2{
     background: #278ca8;
     border-radius: 3px;
-    padding: 5px 120px;
+    padding: 10px;
+    padding-right: 230px;
     color: #ffffff;
+    text-align: center;
 }
 
 
 
 @media only screen and (max-width:568px) {
 	.banner .btn{
-    font-size: 15px;
+    font-size: 10px;
     font-weight: 400;
     color: #ffffff;
     background-color: #278ca8;
     border-radius: 48px;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 10px 20px;
 }
 
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0;
+}
+
+.starter .btn-all.left {
+    float: left;
+	font-size: 15px;
+	padding: 20px 25px;
+}
+
+.starter .btn-all.right {
+    float: right;
+	font-size: 15px;
+	padding: 20px 25px
+}
+
 .wrapper .textholder {
-    margin-top: 30px;
+    margin-top: 10px;
     color: #ffffff;
-    max-width: 550px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -288,23 +308,34 @@ header{
 	font-size: 15px;
     font-weight: 400;
     margin-top: 20px;
-	margin-left: 12px;
+	margin-left: 130px !important;
     background-color: #4c12d1;
 }
 
 .textholder h1 {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 10px;
     line-height: 1.2;
 }
 
 .logo {
-    width: 140px;
+    width: 100px;
     margin: 0 auto;
     background-color: #fff;
     padding: 15px 15px;
     border: 5px double #4b9dc1;
     border-radius: 0 0 50px 50px;
+}
+
+.banner .wrapper .cng-btn {
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffffff;
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 15px 20px;
+    border: none;
+    outline: 0;
 }
 	
 }
@@ -317,6 +348,33 @@ header{
     border-radius: 48px;
     margin-top: 50px;
     padding: 10px 20px;
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0;
+}
+
+.starter .btn-all.left {
+    float: left;
+	font-size: 15px;
+	padding: 20px 25px;
+}
+
+.starter .btn-all.right {
+    float: right;
+	font-size: 15px;
+	padding: 20px 25px
+}
+
+.modal-select1{
+    background: #27AE5F;
+    border-radius: 3px;
+    padding: 5px 0;
+    color: #ffffff;
+	text-align: center;
+	margin-top: 12px;
 }
 
 .textholder h1 {
@@ -350,7 +408,7 @@ header{
 	font-size: 15px;
     font-weight: 400;
     margin-top: 20px;
-	margin-left: 12px;
+	margin-left: 130px !important;
     background-color: #4c12d1;
 }
 
@@ -366,6 +424,25 @@ header{
     margin-top: 80px;
     padding: 15px 25px;
 }
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0;
+}
+
+.starter .btn-all.left {
+    float: left;
+	font-size: 15px;
+	padding: 20px 25px;
+}
+
+.starter .btn-all.right {
+    float: right;
+	font-size: 15px;
+	padding: 20px 25px
+}
+
 
 .textholder h1 {
     font-weight: 600;
@@ -386,7 +463,7 @@ header{
 	font-size: 15px;
     font-weight: 400;
     margin-top: 20px;
-	margin-left: 12px;
+	margin-left: 130px !important;
     background-color: #4c12d1;
 }
 
@@ -453,7 +530,7 @@ header{
     color: #ffffff;
     background-color: #278ca8;
     border-radius: 48px;
-    margin-top: 120px;
+    margin-top: 200px;
     padding: 15px 25px;
 }
 
@@ -498,18 +575,18 @@ header{
     color: #ffffff;
     background-color: #278ca8;
     border-radius: 48px;
-    margin-top: 50px;
-    padding: 15px 25px;
+    margin-top: 25px;
+    padding: 10px 20px;
 }
 
 .textholder h1 {
     font-weight: 600;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 1.2;
 }
 
 .wrapper .textholder {
-    margin-top: 40px;
+    margin-top: 30px;
     color: #ffffff;
     max-width: 550px;
     margin-left: auto;
@@ -521,7 +598,7 @@ header{
 	font-size: 15px;
     font-weight: 400;
     margin-top: 20px;
-	margin-left: 12px;
+	margin-left: 130px !important;
     background-color: #4c12d1;
 }
 
