@@ -211,7 +211,7 @@ function coccount() {
     setCookie("cnt",count,0.02);
     json_str = JSON.stringify(arr);
     setCookie("mycookie",json_str,-1);
-    arr.push(0);
+    arr=[];
     json_str = JSON.stringify(arr);
     setCookie("mycookie",json_str,0.02);   
 }
@@ -809,7 +809,6 @@ var closeDialog = function() {
     setCookie("wrng",0,0.02);
     setCookie("cnt",0,0.02);
     arr=[];
-    arr.push(0);
     json_str = JSON.stringify(arr);
     setCookie("mycookie",json_str,0.02);
 }
