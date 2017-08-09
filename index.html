@@ -36,12 +36,11 @@
       </div><!-- wrapper -->
     </div><!-- banner -->
     <!-- Modal -->
-  <div class="modal custom-modal fade" id="myModal1">
-    <div class="modal-dialog modal-sm"> 
+  <div class="modal custom-modal fade" id="myModal1" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-md"> 
       <!-- Modal content-->
       <div class="modal-content">     
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Welcome to EasyQuizy</h4>
         </div>
 		<div class="modal-body">
@@ -59,9 +58,12 @@
 							<input type="number" id="userInput2">
 						  </div>
 							<hr/>
-						  <button type="button" class="btn-all" data-toggle="modal" onclick="r();" >
+						  <button type="button" class="btn-all pull-left" data-toggle="modal" onclick="r();" >
                 START GAME
-              </button>							
+              </button>		
+              <button type="button" class="btn-all pull-right" data-dismiss="modal">
+                CLOSE
+              </button> 					
                          </form>             
                </div>
 		</div>

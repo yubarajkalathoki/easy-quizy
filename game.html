@@ -63,7 +63,7 @@
         </div>     
 				<button type="button" class="btn-success cng-btn" id="newhide">Correct</button>       
        	</div><!-- row end -->   
-    <div class="modal fade in " id="newmodel"  role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal fade in custom-modal " id="newmodel"  role="dialog" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog modal-lg">
       <!-- Modal content--> 
       <div class="modal-content">
@@ -75,12 +75,12 @@
         </div>
 		<div class="modal-body">
 		 <div class="row">
-            <div class="col-md-4">
-			<div class="modal-select1">
+            <div class="col-md-4" style="margin-bottom: 20px;">
+			<div class="modal-select1" style="margin-bottom: 5px;">
               <h4>Your Questions</h4>
 			  </div>
-			  <br>
-			  <div class="col-md-12">
+			  
+			  
 			  <div class="modal-select2">
 			  <h5>
 			  <script>
@@ -162,14 +162,14 @@
               </script>
               </h5>
 			  </div>
-			  </div>
+			  
             </div>
-            <div class="col-md-4">
-              <div class="modal-select1">
+            <div class="col-md-4" style=" margin-bottom: 20px;">
+              <div class="modal-select1" style="margin-bottom: 5px;">
               <h4>Your Answers</h4>
 			  </div>
-			  <br>
-			  <div class="col-md-12">
+			  
+			  
 			  <div class="modal-select2">
 			  <h5>
               <script>
@@ -251,14 +251,15 @@
               </script>
               </h5>
 			  </div>
-			  </div>
+			  
             </div>
-			<div class="col-md-4">
-              <div class="modal-select1">
+			<div class="col-md-4" style="margin-bottom: 20px;">
+
+              <div class="modal-select1" style="margin-bottom: 5px;">
               <h4>Correct Answers</h4>
 			  </div>
-			  <br>
-			  <div class="col-md-12">
+			  
+			  
 			  <div class="modal-select2">
 			  <h5>
               <script>
@@ -340,16 +341,16 @@
               </script>
               </h5>
 			  </div>
-			  </div>
+			  
             </div>
           </div>
 		</div>
     <div class="modal-footer">
           <div class="starter">
-              <button type="button" class="btn-all left" data-toggle="modal" onclick="closeDialog(); refresh();" >
+              <button type="button" class="btn-all pull-left" data-toggle="modal" onclick="closeDialog(); refresh();" >
                 CONTINUE
               </button>            
-              <button type="button" class="btn-all right" data-toggle="modal" onclick="homepage();" >
+              <button type="button" class="btn-all pull-right" data-toggle="modal" onclick="homepage();" >
                 EXIT
               </button>
              </div><!-- starter -->
