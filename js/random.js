@@ -1,6 +1,5 @@
 var cl=parseFloat(getCookie("num1"));
 var fl=parseFloat(getCookie("num2"));
-
 var n1=0;
 var n2=0;
 var n3=0;
@@ -22,21 +21,14 @@ var noOfQuestionSolved=0;
 var arr=[];
 var json_str;
 function number1(){
-    
     n1=parseInt((Math.random()*(fl-cl)), 10)+(cl);
-    
     value1=n1;
     console.log("Hello n1: "+value1);
-    
 }
-
 function number2(){
-    
     n2=parseInt((Math.random()*(fl-cl)), 10)+(cl);
-    
     value2=n2;
     console.log("Hello n2: "+value2);
-    
 }
 function opn_btn(){
 switch(mth_opn){
@@ -60,19 +52,16 @@ switch(mth_opn){
     default: alert("Invalid");
 }
 }
-
 function add(){
     generateRandom();
     n3 = value1 + value2;
     generateAnswer();
 }
-
 function subtract(){
     generateRandom();
     n3 = value1 - value2;
     generateAnswer();
 }
-
 function multiply(){
     generateRandom();
     range();
@@ -121,77 +110,13 @@ function range(){
         fl=999;
         generateRandom();
     }
-        
-        /*if(value1.toString().length > 3 || value2.toString().length > 3){
-            
-            generateRandom();
-            console.log("I am inside range condition because of value: " + value1 + " " + value2);
-            range();
-        }*/
     }
 }
-
 function generateRandom(){
     number1();
     number2();
 }
-/*function opn_btn(){
-    var mth_opn=0;
-mth_opn=Math.floor(Math.random()*4+1);
-switch(mth_opn){
-    case 1: n3=value1+value2;
-            op="+";
-            break;
-    case 2: n3=value1-value2;
-            op="-";
-            break;
-    case 3: n3=value1*value2;
-            op="x";
-            break;
-    case 4: forDivide();
-            op="/";
-            break;
-    default: alert("Invalid");
-}
-return op;
-}
-function forDivide(){
-   divideRandom();
-   var ran=Math.floor(Math.random()*50+2);
-   value1 = value2 * ran;
-   n3= value1/value2;
-   generateAnswer();
-}
-function divideRandom(){
-   value2 = parseInt((Math.random()*(fl-cl)), 10)+(cl);
-   if(value2.toString().length > 2){
-       divideRandom();
-   }
-}*/
-/*function forDivide(){
-    console.log("I am inside forDivide");
-    while(1){
-        number1();
-        number2();
-        if(value1>value2){
-            if(value1%value2==0&&value2!=1){
-            console.log(value1);
-            console.log(value2);
-            
-            var anns = value1/value2;
-            console.log(anns);
-            document.getElementById('val1').innerText = value1;
-            return (anns);
-            break;
-            }
-        }
-        
-    }
-}*/
-
-
 function r() {  
-
     if(document.form.userInput1.value=="" || isNaN(document.form.userInput1.value) || document.form.userInput2.value=="" || isNaN(document.form.userInput2.value)){
         alert("Field is empty. Please fix the range!");
         homepage();
@@ -205,59 +130,42 @@ function r() {
         r2();
         refresh();
     }
-
  }
-
-
 function r2() {
     console.log("contents of r2");
     if (document.getElementById('userInput2') != null) {
     var input1 = parseFloat(document.getElementById("userInput2").value);
-        setCookie("num2",input1,40);
-        //var a=parseFloat(getCookie("num2"));
-        //return a;
-}
+        setCookie("num2",input1,0.02);
+    }
 }
 function r1() {
-    
     if (document.getElementById('userInput1') != null) {
-        
     input = parseFloat(document.getElementById("userInput1").value);
-    setCookie("num1",input,40);
+    setCookie("num1",input,0.02);
         }
 }
 function setCookie(cname, cvalue, exdays) {
-    
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     var expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-
 function getCookie(cname) {
-    
     var name = cname + "=";
     var ca = document.cookie.split(';');
-    
-    
-    for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        
+      for(var i = 0; i < ca.length; i++) {
+        var c = ca[i]; 
         while (c.charAt(0) == ' ') {
             c = c.substring(1);
-        }
-        
-        
+        }    
         if (c.indexOf(name) == 0) {
-            var finalOutput = c.substring(name.length, c.length);
-            
+            var finalOutput = c.substring(name.length, c.length);           
             return finalOutput;
         }
     }
     return "";
 }
 function chk(click ,btn,btn1,btn2,btn3) {
-    // display popup dialog
     document.getElementById(btn).disabled=true;
     document.getElementById(btn1).disabled=true;
     document.getElementById(btn2).disabled=true;
@@ -273,8 +181,8 @@ function chk(click ,btn,btn1,btn2,btn3) {
             count++;
             property.style.backgroundColor = "#31ad7a";
             property.style.color="#FFFFFF";
-            setCookie("crt",correct,40);
-            setCookie("cnt",count,40);
+            setCookie("crt",correct,0.02);
+            setCookie("cnt",count,0.02);
             console.log(getCookie("crt"));
             toggler();
             console.log(getCookie("crt"));
@@ -282,40 +190,35 @@ function chk(click ,btn,btn1,btn2,btn3) {
                             console.log(count);
             cl=parseFloat(getCookie("num1"));
             fl=parseFloat(getCookie("num2"))*3;
-            setCookie("num1",cl,40);
-            setCookie("num2",fl,40);
+            setCookie("num1",cl,0.02);
+            setCookie("num2",fl,0.02);
             count=0;
-            setCookie("cnt",count,40);
+            setCookie("cnt",count,0.02);
             }
-        }
-        
-        
+        }       
     else{
         wrong=parseFloat(getCookie("wrng"));
         wrong++;
         property.style.backgroundColor = "#c73232";
         property.style.color="#FFFFFF";
         toggler();
-        setCookie("wrng",wrong,40);
+        setCookie("wrng",wrong,0.02);
         count--;
-        setCookie("cnt",count,40);
-         
+        setCookie("cnt",count,0.02);         
     }   
 }
-
 function coccount() {
-    setCookie("cnt",count,40);
+    setCookie("cnt",count,0.02);
     json_str = JSON.stringify(arr);
     setCookie("mycookie",json_str,-1);
     arr.push(0);
     json_str = JSON.stringify(arr);
-    setCookie("mycookie",json_str,40);
-    
+    setCookie("mycookie",json_str,0.02);   
 }
 function cokrw(){
-    setCookie("wrng",wrong,40);
-    setCookie("crt",correct,40);
-    setCookie("noOfQS",noOfQuestionSolved,40);
+    setCookie("wrng",wrong,0.02);
+    setCookie("crt",correct,0.02);
+    setCookie("noOfQS",noOfQuestionSolved,0.02);
 }
 function generateAnswer() {
             while(1){
@@ -400,7 +303,7 @@ function generateAnswer() {
                         ans3=opt2;                            
                         ans4=opt3;
                         break;
-                    }////from here
+                    }
                     else if(num1===5){
                         ans1=opt1;
                         ans2=opt4;
@@ -867,116 +770,30 @@ function lastDigit(lastDigit){
 function toggler() {
 	noOfQuestionSolved=parseFloat(getCookie("noOfQS"));
 	noOfQuestionSolved++;
-	setCookie("noOfQS",noOfQuestionSolved,40);
+	setCookie("noOfQS",noOfQuestionSolved,0.02);
     if(check==n3){
     	newhide.style.backgroundColor = "#31ad7a";
         newhide.style.color="#FFFFFF";
     	$("#" + "newhide").toggle();
-    	/*$("#testload").load(location.href+" #testload>*","");
-    	$("#testload").load(location.href+" #testload>");*/
-/*    	         if(correct==2){
-    	         	fireMeUp();
-     			  }*/
-         	/*alert("Hi");
-          	$('body').addClass('modal-open');
-          	$('#newmodel').addClass('in');
-          	$('#newmodel').addClass('modelin');*/
-          }
-      
+          }     
     else{
     	newhide.style.backgroundColor = "#c73232";
         newhide.style.color="#FFFFFF";
-        $("#" + "newhide").toggle();
-        
+        $("#" + "newhide").toggle();       
         document.getElementById("newhide").innerText="Wrong";
        }
     setTimeout(function (){
-
-    	/*refresh();*/
-/*$("#testload").load(location.href+" #testload>*","");*/
-		/*console.log("before");*/
-		/*$("#rcol").load(location.href+" #rcol");*/
-		/*document.getElementById("test").innerText='hi';*/
-	
 		$("#newhide").css("display","none");
-/*		document.getElementById("newhide").innerText="Correct";
-		number1();
-		number2();
-		document.getElementById("val1").innerText=value1;
-		console.log(value1);
-    	document.getElementById("val2").innerText=value2;
-    	console.log(value2);
-    	document.getElementById("opt").innerText=op;
-    	console.log(op);
-    	console.log(ans1);
-    	console.log(ans2);
-    	console.log(ans3);
-    	console.log(ans4);
-		console.log("after");*/
         saveQuestions();
-        /*if(noOfQuestionSolved==10){
-            fireMeUp();
-        }
-        else*/
 		refresh();
     }, 750);
 }
-
-/*function timer(){
-	// Set the date we're counting down to
-	var countDownDate = new Date().getTime() + 10000;
-
-	// Update the count down every 1 second
-	var x = setInterval(function() {
-	
-    // Get todays date and time
-    var now = new Date().getTime();
-    
-    // Find the distance between now an the count down date
-    var distance = countDownDate - now;
-    
-    // Time calculations for days, hours, minutes and seconds
-
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    // Output the result in an element with id="demo"
-    document.getElementById("t-time").innerHTML = minutes + "m " + seconds + "s ";
-    
-    // If the count down is over, write some text 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("t-time").innerHTML = "EXPIRED";
-        setTimeout(function (){
-            window.open("../EasyQuizy/index.html", "_self");
-        }, 1000);  
-    }
-}, 1000);
-}
-/*function checkCookie() {
-    var user = getCookie("username");
-    if (user != "") {
-        alert("Welcome again " + user);
-    } else {
-        user = prompt("Please enter your name:", "");
-        if (user != "" && user != null) {
-            setCookie("username", user, 365);
-        }
-    }
-}*/
  var fireMeUp = function(){  	
                     noOfQuestionSolved=getCookie("noOfQS");
                     if(noOfQuestionSolved%10==0&&noOfQuestionSolved!=0){
-                    /*$('#bd').addClass("modal-open");
-                     $('#newmodel').css("display","block");*/
-                     /*$('#newmodel').modal('show');*/
-                        setTimeout(function (){ 
+                    setTimeout(function (){ 
         			 $('#newmodel').modal('show');
-                    }, 0);
-                     
-                     /*$('#bd').addClass("modal-open");
-                     $('#newmodel').css("display","block");*/
-
+                     }, 0);
                     }
      				} 
 var   refresh = function(){
@@ -987,28 +804,15 @@ var homepage = function(){
 }
 var closeDialog = function() {
     setCookie("mycookie",json_str,-1);
-    setCookie("noOfQS",0,40);
-    setCookie("crt",0,40);
-    setCookie("wrng",0,40);
-    setCookie("cnt",0,40);
+    setCookie("noOfQS",0,0.02);
+    setCookie("crt",0,0.02);
+    setCookie("wrng",0,0.02);
+    setCookie("cnt",0,0.02);
     arr=[];
     arr.push(0);
     json_str = JSON.stringify(arr);
-    setCookie("mycookie",json_str,40);
+    setCookie("mycookie",json_str,0.02);
 }
-/*function refresh(){
-		number1();
-		number2();
-		document.write(value1);
-		document.write(opn_btn());
-		document.write(value2);
-    	generateAnswer();
-    	if(value1!=null && value2!=null){
-    	document.getElementById("val1").innerText=value1;
-    	document.getElementById("val2").innerText=value2;
-    	document.getElementById("opt").innerText=op;
-    }
-}*/
 function saveQuestions(){
     json_str = getCookie('mycookie');
     arr = JSON.parse(json_str);
