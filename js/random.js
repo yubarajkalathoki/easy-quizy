@@ -69,10 +69,6 @@ function multiply(){
     generateAnswer();
 }
 function divide(){
-    if(fl<=3){
-        randomOperator();
-        opn_btn();
-    }
     var divideCount=0;
     divideRandom();
     ran=Math.floor(Math.random()*fl+2);
@@ -98,10 +94,13 @@ function divideRandom(){
     }
 }
 function randomOperator(){
-    mth_opn=Math.floor(Math.random()*4+1);
-    if(fl<=3 && mth_opn == 4){
-        randomOperator();
+    var maxx;
+    if((cl!=1 && cl*2>fl) || fl<=3 || fl>999){
+            maxx = 3;
+        }else{
+            maxx = 4;
         }
+    mth_opn=Math.floor(Math.random()*maxx+1);
 }
 function range(){
     console.log("Value of cl: " + cl);
@@ -268,7 +267,7 @@ function generateAnswer() {
                 var opt3=opt1+10;
                 var opt4=opt1+20;
                 var opt5=opt1-20;                   
-                var num1=(parseInt((Math.random()*(1000000-1+1)), 10)+(1))%72;
+                var num1=(parseInt((Math.random()*(1000000-1+1)), 10)+(1))%5;
                     if(num1===0){
                         ans1=opt1;
                         ans2=opt2;
@@ -277,486 +276,32 @@ function generateAnswer() {
                         break;
                     }
                     else if(num1===1){
-                        ans1=opt1;
-                        ans2=opt3;
+                        ans1=opt4;
+                        ans2=opt1;
                         ans3=opt2;                          
-                        ans4=opt4;
+                        ans4=opt3;
                         break;
                     }
                     else if(num1===2){
-                        ans1=opt1;
-                        ans2=opt3;
-                        ans3=opt4;                            
+                        ans1=opt3;
+                        ans2=opt4;
+                        ans3=opt1;                            
                         ans4=opt2;
                         break;
                     }
                     else if(num1===3){
                         ans1=opt1;
                         ans2=opt2;
-                        ans3=opt4;                          
-                        ans4=opt3;
-                        break;
-                    }
-                    else if(num1===4){
-                        ans1=opt1;
-                        ans2=opt4;
-                        ans3=opt2;                            
-                        ans4=opt3;
-                        break;
-                    }
-                    else if(num1===5){
-                        ans1=opt1;
-                        ans2=opt4;
-                        ans3=opt3;                          
-                        ans4=opt2;
-                        break;
-                    }
-                    else if(num1===6){
-                        ans1=opt2;
-                        ans2=opt1;
-                        ans3=opt3;                            
-                        ans4=opt4;
-                        break;
-                    }
-                    else if(num1===7){
-                        ans1=opt2;
-                        ans2=opt1;
-                        ans3=opt4;                          
-                        ans4=opt3;
-                        break;
-                    }
-                    else if(num1===8){
-                        ans1=opt3;
-                        ans2=opt1;
-                        ans3=opt2;                            
-                        ans4=opt4;
-                        break;
-                    }else if(num1===9){
-                        ans1=opt3;
-                        ans2=opt1;
-                        ans3=opt4;                          
-                        ans4=opt2;
-                        break;
-                    }
-                    else if(num1===10){
-                        ans1=opt4;
-                        ans2=opt1;
-                        ans3=opt2;                            
-                        ans4=opt3;
-                        break;
-                    }
-                    else if(num1===11){
-                        ans1=opt4;
-                        ans2=opt1;
-                        ans3=opt3;                          
-                        ans4=opt2;
-                        break;
-                    }
-                    else if(num1===12){
-                        ans1=opt2;
-                        ans2=opt3;
-                        ans3=opt1;                            
-                        ans4=opt4;
-                        break;
-                    }else if(num1===13){
-                        ans1=opt3;
-                        ans2=opt2;
-                        ans3=opt1;                          
-                        ans4=opt4;
-                        break;
-                    }
-                    else if(num1===14){
-                        ans1=opt4;
-                        ans2=opt3;
-                        ans3=opt1;                            
-                        ans4=opt2;
-                        break;
-                    }
-                    else if(num1===15){
-                        ans1=opt3;
-                        ans2=opt4;
-                        ans3=opt1;                          
-                        ans4=opt2;
-                        break;
-                    }
-                    else if(num1===16){
-                        ans1=opt4;
-                        ans2=opt2;
-                        ans3=opt1;                            
-                        ans4=opt3;
-                        break;
-                    }else if(num1===17){
-                        ans1=opt2;
-                        ans2=opt4;
-                        ans3=opt1;                          
-                        ans4=opt3;
-                        break;
-                    }
-                    else if(num1===18){
-                        ans1=opt1;
-                        ans2=opt2;
-                        ans3=opt5;                            
-                        ans4=opt4;
-                        break;
-                    }
-                    else if(num1===19){
-                        ans1=opt1;
-                        ans2=opt5;
-                        ans3=opt2;                          
-                        ans4=opt4;
-                        break;
-                    }
-                    else if(num1===20){
-                        ans1=opt1;
-                        ans2=opt5;
-                        ans3=opt4;                            
-                        ans4=opt2;
-                        break;
-                    }else if(num1===21){
-                        ans1=opt1;
-                        ans2=opt2;
-                        ans3=opt4;                          
-                        ans4=opt5;
-                        break;
-                    }
-                    else if(num1===22){
-                        ans1=opt1;
-                        ans2=opt4;
-                        ans3=opt2;                            
-                        ans4=opt5;
-                        break;
-                    }
-                    else if(num1===23){
-                        ans1=opt1;
-                        ans2=opt4;
-                        ans3=opt5;                          
-                        ans4=opt2;
-                        break;
-                    }
-                    else if(num1===24){
-                        ans1=opt2;
-                        ans2=opt1;
-                        ans3=opt5;                            
-                        ans4=opt4;
-                        break;
-                    }else if(num1===25){
-                        ans1=opt2;
-                        ans2=opt1;
-                        ans3=opt4;                          
-                        ans4=opt5;
-                        break;
-                    }
-                    else if(num1===26){
-                        ans1=opt5;
-                        ans2=opt1;
-                        ans3=opt2;                            
-                        ans4=opt4;
-                        break;
-                    }
-                    else if(num1===27){
-                        ans1=opt5;
-                        ans2=opt1;
-                        ans3=opt4;                          
-                        ans4=opt2;
-                        break;
-                    }
-                    else if(num1===28){
-                        ans1=opt5;
-                        ans2=opt1;
-                        ans3=opt2;                            
-                        ans4=opt3;
-                        break;
-                    }else if(num1===29){
-                        ans1=opt5;
-                        ans2=opt1;
-                        ans3=opt3;                          
-                        ans4=opt2;
-                        break;
-                    }
-                    else if(num1===30){
-                        ans1=opt1;
-                        ans2=opt2;
-                        ans3=opt3;                            
-                        ans4=opt5;
-                        break;
-                    }
-                    else if(num1===31){
-                        ans1=opt1;
-                        ans2=opt3;
-                        ans3=opt2;                          
-                        ans4=opt5;
-                        break;
-                    }
-                    else if(num1===32){
-                        ans1=opt1;
-                        ans2=opt3;
-                        ans3=opt5;                            
-                        ans4=opt2;
-                        break;
-                    }else if(num1===33){
-                        ans1=opt1;
-                        ans2=opt2;
                         ans3=opt5;                          
                         ans4=opt3;
                         break;
                     }
-                    else if(num1===34){
-                        ans1=opt1;
-                        ans2=opt5;
-                        ans3=opt2;                            
-                        ans4=opt3;
-                        break;
-                    }
-                    else if(num1===35){
-                        ans1=opt1;
-                        ans2=opt5;
-                        ans3=opt3;                          
-                        ans4=opt2;
-                        break;
-                    }
-                    else if(num1===36){
-                        ans1=opt2;
-                        ans2=opt1;
-                        ans3=opt3;                            
-                        ans4=opt5;
-                        break;
-                    }else if(num1===37){
-                        ans1=opt2;
-                        ans2=opt1;
-                        ans3=opt5;                          
-                        ans4=opt3;
-                        break;
-                    }
-                    else if(num1===38){
+                    else {
                         ans1=opt3;
-                        ans2=opt1;
-                        ans3=opt2;                            
-                        ans4=opt5;
-                        break;
-                    }
-                    else if(num1===39){
-                        ans1=opt3;
-                        ans2=opt1;
-                        ans3=opt5;                          
-                        ans4=opt2;
-                        break;
-                    }
-                    else if(num1===40){
-                        ans1=opt5;
-                        ans2=opt1;
-                        ans3=opt2;                            
-                        ans4=opt3;
-                        break;
-                    }else if(num1===41){
-                        ans1=opt5;
-                        ans2=opt1;
-                        ans3=opt3;                          
-                        ans4=opt2;
-                        break;
-                    }
-                    else if(num1===42){
-                        ans1=opt2;
-                        ans2=opt3;
-                        ans3=opt1;                            
-                        ans4=opt5;
-                        break;
-                    }
-                    else if(num1===43){
-                        ans1=opt3;
-                        ans2=opt2;
-                        ans3=opt1;                          
-                        ans4=opt5;
-                        break;
-                    }
-                    else if(num1===44){
-                        ans1=opt5;
-                        ans2=opt3;
-                        ans3=opt1;                            
-                        ans4=opt2;
-                        break;
-                    }else if(num1===45){
-                        ans1=opt3;
-                        ans2=opt5;
-                        ans3=opt1;                          
-                        ans4=opt2;
-                        break;
-                    }
-                    else if(num1===46){
-                        ans1=opt5;
-                        ans2=opt2;
-                        ans3=opt1;                            
-                        ans4=opt3;
-                        break;
-                    }
-                    else if(num1===47){
-                        ans1=opt2;
-                        ans2=opt5;
-                        ans3=opt1;                          
-                        ans4=opt3;
-                        break;
-                    }
-                    else if(num1===48){
-                        ans1=opt2;
                         ans2=opt5;
                         ans3=opt1;                            
                         ans4=opt4;
                         break;
-                    }else if(num1===49){
-                        ans1=opt5;
-                        ans2=opt2;
-                        ans3=opt1;                          
-                        ans4=opt4;
-                        break;
-                    }
-                    else if(num1===50){
-                        ans1=opt4;
-                        ans2=opt5;
-                        ans3=opt1;                            
-                        ans4=opt2;
-                        break;
-                    }
-                    else if(num1===51){
-                        ans1=opt5;
-                        ans2=opt4;
-                        ans3=opt1;                          
-                        ans4=opt2;
-                        break;
-                    }
-                    else if(num1===52){
-                        ans1=opt4;
-                        ans2=opt2;
-                        ans3=opt1;                            
-                        ans4=opt5;
-                        break;
-                    }else if(num1===53){
-                        ans1=opt2;
-                        ans2=opt4;
-                        ans3=opt1;                          
-                        ans4=opt5;
-                        break;
-                    }
-                    else if(num1===54){
-                        ans1=opt1;
-                        ans2=opt5;
-                        ans3=opt3;                            
-                        ans4=opt4;
-                        break;
-                    }
-                    else if(num1===55){
-                        ans1=opt1;
-                        ans2=opt3;
-                        ans3=opt5;                          
-                        ans4=opt4;
-                        break;
-                    }
-                    else if(num1===56){
-                        ans1=opt1;
-                        ans2=opt3;
-                        ans3=opt4;                            
-                        ans4=opt5;
-                        break;
-                    }else if(num1==57){
-                        ans1=opt1;
-                        ans2=opt5;
-                        ans3=opt4;                          
-                        ans4=opt3;
-                        break;
-                    }
-                    else if(num1===58){
-                        ans1=opt1;
-                        ans2=opt4;
-                        ans3=opt5;                            
-                        ans4=opt3;
-                        break;
-                    }
-                    else if(num1===59){
-                        ans1=opt1;
-                        ans2=opt4;
-                        ans3=opt3;                          
-                        ans4=opt5;
-                        break;
-                    }
-                    else if(num1===60){
-                        ans1=opt5;
-                        ans2=opt1;
-                        ans3=opt3;                            
-                        ans4=opt4;
-                        break;
-                    }else if(num1===61){
-                        ans1=opt5;
-                        ans2=opt1;
-                        ans3=opt4;                          
-                        ans4=opt3;
-                        break;
-                    }
-                    else if(num1===62){
-                        ans1=opt3;
-                        ans2=opt1;
-                        ans3=opt5;                            
-                        ans4=opt4;
-                        break;
-                    }
-                    else if(num1===63){
-                        ans1=opt3;
-                        ans2=opt1;
-                        ans3=opt4;                          
-                        ans4=opt5;
-                        break;
-                    }
-                    else if(num1===64){
-                        ans1=opt4;
-                        ans2=opt1;
-                        ans3=opt5;                            
-                        ans4=opt3;
-                        break;
-                    }else if(num1===65){
-                        ans1=opt4;
-                        ans2=opt1;
-                        ans3=opt3;                          
-                        ans4=opt5;
-                        break;
-                    }
-                    else if(num1===66){
-                        ans1=opt5;
-                        ans2=opt3;
-                        ans3=opt1;                            
-                        ans4=opt4;
-                        break;
-                    }
-                    else if(num1===67){
-                        ans1=opt3;
-                        ans2=opt5;
-                        ans3=opt1;                          
-                        ans4=opt4;
-                        break;
-                    }
-                    else if(num1===68){
-                        ans1=opt4;
-                        ans2=opt3;
-                        ans3=opt1;                            
-                        ans4=opt5;
-                        break;
-                    }
-                    else if(num1===69){
-                        ans1=opt3;
-                        ans2=opt4;
-                        ans3=opt1;                          
-                        ans4=opt5;
-                        break;
-                    }
-                    else if(num1===70){
-                        ans1=opt4;
-                        ans2=opt5;
-                        ans3=opt1;                            
-                        ans4=opt3;
-                        break;
-                    }
-                    else{
-                        ans1=opt5;
-                        ans2=opt4;
-                        ans3=opt1;
-                        ans4=opt3;
-                        break;                                                      
                     }
             } 
             }         
