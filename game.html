@@ -20,14 +20,10 @@
       <div class="row"><!-- row start -->
           <div class="col-lg-12">
               <a href="index.html">
-                <img src="img/home.png" style="width: 60px; float: left;">
-              </a>
-              <a href="#">
-                <img src="img/ques.png" style="width: 40px; float: right; margin-top:13px;">
-              </a>
-              <div class="logo">
-                  <img src="img/logo.png" alt="Logo">          
-              </div>              
+                <div class="logo">
+                    <img src="img/logo.png" alt="Logo">          
+                </div> 
+              </a>             
              
             
       </div><!-- row end -->
@@ -54,7 +50,7 @@
 						<button type="button" class="btn-success cng-btn" id="val2"><script>
     					document.write(value2);
     					generateAnswer();
-						</script></button><br>
+						</script></button><div class="clearfix"></div>
 						<button type="button" class="btn-primary cng-btn" onclick="chk(ans1, 'ans1','ans2','ans3','ans4')" id="ans1"><script>
 						document.write(ans1);
 						</script></button>
@@ -68,7 +64,7 @@
 						document.write(ans4);
 						</script></button>
         </div>     
-				<button type="button" class="btn-success cng-btn" id="newhide">Correct</button>       
+				<button type="button" class="btn-success cng-btn text-center pull-right" id="newhide">Correct</button>       
        	</div><!-- row end -->   
     <div class="modal fade in custom-modal " id="newmodel"  role="dialog" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog modal-lg">
@@ -96,7 +92,7 @@
               document.write(arr[0]+ arr[1]+ arr[2]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
 			  <script>
               var json_str = getCookie('mycookie');
@@ -104,7 +100,7 @@
               document.write(arr[5]+arr[6]+arr[7]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div> 
 			  <h5>
 			  <script>
               var json_str = getCookie('mycookie');
@@ -112,7 +108,7 @@
               document.write(arr[10]+arr[11]+arr[12]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
 			  <script>
               var json_str = getCookie('mycookie');
@@ -120,7 +116,7 @@
               document.write(arr[15]+arr[16]+arr[17]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
 			  <script>
               var json_str = getCookie('mycookie');
@@ -128,7 +124,7 @@
               document.write(arr[20]+arr[21]+arr[22]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
 			  <script>
               var json_str = getCookie('mycookie');
@@ -136,7 +132,7 @@
               document.write(arr[25]+arr[26]+arr[27]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -144,7 +140,7 @@
               document.write(arr[30]+arr[31]+arr[32]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -152,7 +148,7 @@
               document.write(arr[35]+arr[36]+arr[37]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -160,7 +156,7 @@
               document.write(arr[40]+arr[41]+arr[42]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
 			  <script>
               var json_str = getCookie('mycookie');
@@ -183,9 +179,12 @@
               var json_str = getCookie('mycookie');
               arr = JSON.parse(json_str);
               document.write(arr[3]);
+              
               </script>
+
               </h5>
-			  <br>
+
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -193,7 +192,7 @@
               document.write(arr[8]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -201,7 +200,7 @@
               document.write(arr[13]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -209,7 +208,7 @@
               document.write(arr[18]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -217,7 +216,7 @@
               document.write(arr[23]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -225,7 +224,7 @@
               document.write(arr[28]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -233,7 +232,7 @@
               document.write(arr[33]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div> 
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -241,7 +240,7 @@
               document.write(arr[38]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -249,7 +248,7 @@
               document.write(arr[43]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -275,7 +274,7 @@
               document.write(arr[4]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -283,7 +282,7 @@
               document.write(arr[9]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -291,7 +290,7 @@
               document.write(arr[14]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -299,7 +298,7 @@
               document.write(arr[19]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -307,7 +306,7 @@
               document.write(arr[24]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -315,7 +314,7 @@
               document.write(arr[29]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -323,7 +322,7 @@
               document.write(arr[34]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -331,7 +330,7 @@
               document.write(arr[39]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -339,7 +338,7 @@
               document.write(arr[44]);
               </script>
               </h5>
-			  <br>
+			  <div class="clearfix"></div>
 			  <h5>
               <script>
               var json_str = getCookie('mycookie');
@@ -360,7 +359,7 @@
               <button type="button" class="btn-all pull-right" data-toggle="modal" onclick="homepage();" >
                 EXIT
               </button>
-             </div><!-- starter -->
+          </div><!-- starter -->
         </div><!-- modal-footer -->
       </div><!-- modal-content -->
     </div><!-- modal-dialog -->

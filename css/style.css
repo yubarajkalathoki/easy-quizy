@@ -108,7 +108,7 @@ header{
 
 .starter {
 	text-align: center;
-	margin: 21px 0 28px 0;
+	
 
 }
 .starter a:hover,.homepage a:hover{
@@ -143,7 +143,8 @@ header{
 }
 #newhide {
 	display: none;
-	margin-top: 176px;
+	margin-right:85px;
+    margin-top: 1px;
 	background-color: #4c12d1;
 }
 
@@ -610,5 +611,14 @@ header{
     border: 5px double #4b9dc1;
     border-radius: 0 0 50px 50px;
 }
-
-
+.btm .btn-all{
+    background: #278ca8;
+    border: none;
+    border-radius: 34px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #ffffff;
+    outline: 0 !important;
+    min-width: 190px;
+}

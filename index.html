@@ -31,11 +31,43 @@
                 <div class="textholder">
                   <h1>LEARN THE ART OF INVESTING OF PLAYING</h1>
                 </div>
-                      <button class="btn btn-default btn-lg center-block" type="button" data-toggle="modal" onclick="coccount(); cokrw();" data-target="#myModal1">PLAY NOW</button>                   
+                      <button class="btn btn-default btn-lg center-block" type="button" data-toggle="modal" onclick="coccount(); cokrw();" data-target="#myModal1">PLAY NOW</button>                 
+                        
+                                     
+                                       
             </div><!-- col-md-6 col-md-offset-3 text-center -->
         </div><!-- row -->
       </div><!-- wrapper -->
     </div><!-- banner -->
+    <div class="btm">
+    <button type="button" class="btn-all center-block" data-target="#myModalHelp" data-toggle="modal">How to Play?</button>
+    </div>
+      <!-- ModalHelp -->
+  <div class="modal custom-modal fade" id="myModalHelp" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-md"> 
+      <!-- ModalHelp content-->
+      <div class="modal-content">     
+        <div class="modal-header">
+          <h4 class="modal-title">How to Play?</h4>
+        </div>
+      <div class="modal-body">     
+          <img src="img/GameHelp.jpg" alt="GameHelpImg" style="max-width:100%; height:auto;"> 
+          <h5 style="text-align: center;">Two numbers ranging <span style="font-weight: bold;">FROM: 5 TO: 10</span> will be provided in green box.
+          <div class="clearfix"></div>
+          Now, select the correct option from blue box.</h5> 
+      </div>
+        <div class="modal-footer">
+          <div class="starter">                        
+              <button type="button" class="btn-all" data-toggle="modal" onclick="homepage();" >
+                EXIT
+              </button>
+          </div><!-- starter -->
+        </div><!-- modal-footer -->
+      </div><!-- modalHelp-content -->
+    </div><!-- modalHelp-dialog -->
+  </div><!-- "modalHelp fade -->
+
+
     <!-- Modal -->
   <div class="modal custom-modal fade" id="myModal1" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog modal-md"> 
@@ -44,7 +76,7 @@
         <div class="modal-header">
           <h4 class="modal-title">Welcome to EasyQuizy</h4>
         </div>
-		<div class="modal-body">
+		  <div class="modal-body">
             <div class="modal-select">          
               <h3>Enter the range!</h3>            
              </div>
@@ -52,7 +84,7 @@
                         <form id="form" name="form" onsubmit="return false;" class="form">
                           <div class="inputpanel clearfix">
 							<label for="userInput1">From</label>
-							<input type="number" id="userInput1" placeholder="Enter start range number !">
+							<input type="number" id="userInput1" placeholder="Enter start range number ! ">
 						  </div> 
 						  <div class="inputpanel clearfix">
 							<label for="userInput2">To</label>
