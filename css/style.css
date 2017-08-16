@@ -218,6 +218,7 @@ header{
     color: #ffffff;
 	outline: 0 !important;
     min-width: 190px;
+    margin: 20px;
  }
  
  .btn-all:hover {
