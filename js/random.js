@@ -178,8 +178,8 @@ function chk(click ,btn,btn1,btn2,btn3) {
             console.log(getCookie("crt"));
             if(parseFloat(getCookie("cnt"))==3){
                             console.log(count);
-            cl=parseFloat(getCookie("num1"));
-            fl=parseFloat(getCookie("num2"))*3;
+            cl=parseFloat(getCookie("num1"))+5;
+            fl=parseFloat(getCookie("num2"))+10;
             setCookie("num1",cl,0.02);
             setCookie("num2",fl,0.02);
             count=0;
