@@ -115,34 +115,25 @@ function generateRandom(){
     number1();
     number2();
 }
-function r() {  
-    if(document.form.userInput1.value=="" || isNaN(document.form.userInput1.value) || document.form.userInput2.value=="" || isNaN(document.form.userInput2.value)){
-        alert("Field is empty. Please fix the range!");
-        homepage();
-    }
-    else if(document.form.userInput1.value==document.form.userInput2.value){
-        alert("Invalid Input");
-        homepage();
-    }
-    else {
-        r1();
-        r2();
+function easy() {  
+
+        setCookie("num1",1,0.02);
+        setCookie("num2",10,0.02);
         refresh();
     }
- }
-function r2() {
-    console.log("contents of r2");
-    if (document.getElementById('userInput2') != null) {
-    var input1 = parseFloat(document.getElementById("userInput2").value);
-        setCookie("num2",input1,0.02);
+function medium() {  
+
+        setCookie("num1",10,0.02);
+        setCookie("num2",50,0.02);
+        refresh();
     }
-}
-function r1() {
-    if (document.getElementById('userInput1') != null) {
-    input = parseFloat(document.getElementById("userInput1").value);
-    setCookie("num1",input,0.02);
-        }
-}
+function hard() {  
+
+        setCookie("num1",50,0.02);
+        setCookie("num2",500,0.02);
+        refresh();
+    }
+
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
